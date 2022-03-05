@@ -64,7 +64,12 @@ To help users find good deals, transactions that are 1 standard deviation below 
 
 <center>
 
-![](data/rent1.png)
+![](data/buy2.png)
+</center>
+
+<center>
+
+![](data/buy3.png)
 </center>
 
 ## b) The Break-Even Tab
@@ -79,7 +84,15 @@ There will also be choropleth map to show which districts tend to be better inve
 
 </center>
 
+![](data/be2.png)
+
+</center>
+
 
 # 6) Project Management
+
+(**Project Management**)[https://en.wikipedia.org/wiki/Project_management] is the process of leading the work of a team to achieve all project goals within the given constraints.  Proper project management will entail clear definitions of the project goals, understanding the projects constraints, identifying the project risks, managing the team members and proper allocation of resource to ensure that assigned tasks can be fulfilled, proper documentation and update on the project status.   
+
+For this project, we will be adopting the (**agile** project management)[ https://www.apm.org.uk/resources/find-a-resource/agile-project-management/] approach instead of the traditional waterfall approach.  This is especially critical due to the very limited timeline of this project.  Storyboarding via sketches and rapid prototyping of the app via the agile methodology will allow for fast response to changes through collaborative and iterative feedback loop between the team members.  The risk management part for this project identified are the learning curve for R Shiny and the time management of the team members for this project with other commitments from work and school.  Proper project management measures and tracking will help to mitigate the identified risk.  
 
 # 7) Other relevant work
