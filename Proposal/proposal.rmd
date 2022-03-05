@@ -31,7 +31,7 @@ We hope to overcome these problems by developing an app which is free, interacti
 
 # 3) Our Solution
 
-Using various R packages such as ggstatsplot, Tidyverse, and tmap, the team will extract, analyse, and visualize sales and rental transaction and build an __interactive R Shiny application__ that allow layman to perform the following analysis:
+Using various R packages, the team will extract, analyse, and visualize sales and rental transaction and build an __interactive R Shiny application__ that allow layman to perform the following analysis:
 
 __a)__ Identifying private property that is of good value to purchase (i.e. below market value of comparable properties within the same postal district);
 
@@ -42,13 +42,33 @@ __c)__ Calculating i) rental yield and ii) number of years to “break-even” t
 
 # 4) The Data
 
-The following datasets will be sourced from the Real Estate Information System (REALIS). We will extract the following sales and rental transaction records in the Singapore's private residential market from years 2012 to Feburary 2022:
+The following datasets will be sourced from the Real Estate Information System (REALIS). We will extract the following sales and rental transaction records in the Singapore's private residential market from years Jan 2019 to Feb 2022:
 
-+ xxxx: This datasets consists of xx variable and xx datapoints.
-+ xxxx: This datasets consists of xx variable and xx datapoints.
++ Sales: This dataset consists of 21 variables and 82,360 datapoints.
++ Rental: This dataset consists of 9 variables and 298,639 datapoints.
 
 
-# 5) Proposed Analytical and Visualisation Approach
+# 5) Methodology and Analytical Approach
+
+## a) Exploratory Data Analysis (EDA) via Data Visualisation 
+
+For this project, Exploratory Data Analysis (EDA) in the form of visualisation techniques will be applied to provide potential buyers with the ability to obtain statistically based insights through visual analytics.  By adopting visualisation concepts like visualisation of uncertainty, multivariate analysis and time series analysis to allow sense-making of the property data to help potential buyers uncover the truth while searching for their golden goose. 
+
+## b) Sensitivity Analysis via Data Visualisation 
+
+The property market is known to be volatile and dynamic.  There are lots of components that will affect the sales price and the rental price.  Taking into consideration of the key components like the trend in interest rate and housing cooling measures like the recent 2021 amendments to Additional Buyer's Stamp Duty (ABSD) and Total Debt Servicing Ratio (TDSR), the project will allow for sensitivity analysis to be performed via visualisation to calculate the break-even point for potential buyers to consider before they embark on investing in a property for rental yield. 
+
+# 6) Data Visualisation Methods
+
+In our application, the following data visualisation methods would be adopted:
+
++ Time Series Box Plot 
++ Violin Plot 
++ Error Plot 
++ Horizon Graph 
++ Generalized Pairs Plot 
+ 
+In the ensuing paragraphs, we will elaborate on the application of these visualisation methods in our R Shiny Application.
 
 ## a) The Buy and Rent Tab
 
@@ -84,15 +104,47 @@ There will also be choropleth map to show which districts tend to be better inve
 
 </center>
 
+<center>
+
 ![](data/be2.png)
 
 </center>
 
+# 7) R Shiny Packages
 
-# 6) Project Management
+Our Application makes use of the following R Shiny packages:
 
-(**Project Management**)[https://en.wikipedia.org/wiki/Project_management] is the process of leading the work of a team to achieve all project goals within the given constraints.  Proper project management will entail clear definitions of the project goals, understanding the projects constraints, identifying the project risks, managing the team members and proper allocation of resource to ensure that assigned tasks can be fulfilled, proper documentation and update on the project status.   
++ [**tidyverse**](https://www.tidyverse.org/packages/) - A collection of R packages designed for data science 
 
-For this project, we will be adopting the (**agile** project management)[ https://www.apm.org.uk/resources/find-a-resource/agile-project-management/] approach instead of the traditional waterfall approach.  This is especially critical due to the very limited timeline of this project.  Storyboarding via sketches and rapid prototyping of the app via the agile methodology will allow for fast response to changes through collaborative and iterative feedback loop between the team members.  The risk management part for this project identified are the learning curve for R Shiny and the time management of the team members for this project with other commitments from work and school.  Proper project management measures and tracking will help to mitigate the identified risk.  
++ [**knitr**](https://cran.r-project.org/web/packages/knitr/index.html) - An engine for dynamic report generation with R, enables integration with Markdown documents 
 
-# 7) Other relevant work
++ [**ggstatsplot**](https://www.rdocumentation.org/packages/ggstatsplot/versions/0.1.4) - An extension of ggplot2 package for creating graphics with details from statistical tests included in the plots 
+
++ [**ggHoriPlot**](https://github.com/rivasiker/ggHoriPlot) - To build horizon plots in ggplot2 
+
++ [**ggdist**](https://cran.r-project.org/web/packages/ggdist/index.html) - To provide primitives for visualizing distributions using 'ggplot2' that are particularly tuned for visualizing uncertainty in either a frequentist or Bayesian mode 
+
++ [**plotly**](https://plotly.com/r/) – To build interactive graph 
+
+
+# 8) Project Management
+
+[**Project Management**](https://en.wikipedia.org/wiki/Project_management) is the process of leading the work of a team to achieve all project goals within the given constraints.  Proper project management will entail clear definitions of the project goals, understanding the projects constraints, identifying the project risks, managing the team members and proper allocation of resource to ensure that assigned tasks can be fulfilled, proper documentation and update on the project status.   
+
+For this project, we will be adopting the [**agile project management**](https://www.apm.org.uk/resources/find-a-resource/agile-project-management/) approach instead of the traditional waterfall approach.  This is especially critical due to the very limited timeline of this project.  Storyboarding via sketches and rapid prototyping of the app via the agile methodology will allow for fast response to changes through collaborative and iterative feedback loop between the team members.  The risk management part for this project identified are the learning curve for R Shiny and the time management of the team members for this project with other commitments from work and school.  Proper project management measures and tracking will help to mitigate the identified risk.  
+
+Here is an overview of our project timeline:
+
+```{r, layout="l-body-outset", fig.width=20, fig.height=20, echo=FALSE}
+library(knitr)
+include_graphics("data/timeline.jpg")
+```
+
+
+<center>
+*~ We welcome any feedback and suggestion on our project. ^^ ~*
+
+
+![](data/thanks.png)
+
+</center>
