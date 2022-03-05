@@ -1,0 +1,85 @@
+---
+title: "Spotting a Golden Goose (a.k.a. Profitable Rental Property) in Singapore"
+description: |
+  Group 5's Project Poposal
+author:
+  - name: Annie CHAN Wa Lam, LIN Shuyan, TING Peiling
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, eval = TRUE, fig.retina = 3)
+```
+
+# 1) Motivation of the Project
+
+It is many Singaporean's dream to own at least one rental property as part of their investment portfolio or retirement plan (us included, of course). 
+
+However, considering the huge quantum of initial investment involved and the lack of understanding in the ever changing pricing conditions of the local property market, investing in real estate can be daunting, especially so for a first-time investor.
+
+# 2) Problems
+
+__a)__ Commercial, free property websites such as [Property Guru](https://www.propertyguru.com.sg/) does not provide reliable and extractable structured data for users' analysis. 
+
+__b)__ Reliable private residential transaction data generated from the Real Estate Information System (REALIS) is __subscription-based__. This is also the case for off-the shelf statistical and visualisation tools such as SAS JMP and tableau, if users wish to perform their own unbiased property price analysis.
+
+__c)__ __Technical knowledge is needed__ to perform accurate and reliable data-manipulation and data-wrangling, before voluminous property transaction data can be visualised to generate useful insights that is customised to each users' needs effectively.
+
+We hope to overcome these problems by developing an app which is free, interactive, and easy-to-use. It is our desire to aid all landlord wannabes who have no technical training in data analysis to identify their their dream golden goose, based on their individual preferences such as location, property tenure, and floor area.
+
+
+# 3) Our Solution
+
+Using various R packages such as ggstatsplot, Tidyverse, and tmap, the team will extract, analyse, and visualize sales and rental transaction and build an __interactive R Shiny application__ that allow layman to perform the following analysis:
+
+__a)__ Identifying private property that is of good value to purchase (i.e. below market value of comparable properties within the same postal district);
+
+__b)__ Identifying private property that is of with good rental yield (i.e. above market monthly rent of comparable properties within the same postal district); and
+
+__c)__ Calculating i) rental yield and ii) number of years to “break-even” the investment by dividing sales price of a) by rental price of b). 
+
+
+# 4) The Data
+
+The following datasets will be sourced from the Real Estate Information System (REALIS). We will extract the following sales and rental transaction records in the Singapore's private residential market from years 2012 to Feburary 2022:
+
++ xxxx: This datasets consists of xx variable and xx datapoints.
++ xxxx: This datasets consists of xx variable and xx datapoints.
+
+
+# 5) Proposed Analytical and Visualisation Approach
+
+## a) The Buy and Rent Tab
+
+In the buy and rent tabs, users will be able to select district and various attributes (e.g. lease length, size etc). The selected options will be passed to a choropleth map to show spatial distribution of mean sales price/ monthly rental, a data visualization will reflect all past transactions and boxes with summary information of number of transactions, last transaction date and mean price. 
+
+To help users find good deals, transactions that are 1 standard deviation below the mean price will be colour-coded. For the rent tab, transaction deviating from the mean by more than 1 standard deviation will also be colour-coded to indicate units with high/low rental yield. 
+
+<center>
+
+![](data/buy1.png)
+</center>
+
+
+<center>
+
+![](data/rent1.png)
+</center>
+
+## b) The Break-Even Tab
+
+For the breakeven tab, users will be able to input key property information (e.g. district, size, lease type) to get a prediction of mean breakeven time and net rental yield. These are computed based on input variables of total cash outlay (down payment, ABSD rate, renovation cost and rental income tax) and net rental income (maintenance and tax rates, mortgage interest and agent fees, and property vacancy rate) which can be modified by the user although defaults based on research will be given. 
+
+There will also be choropleth map to show which districts tend to be better investments. It can be toggled to show either breakeven year or rental yield. A graph for cumulative cost and rental over time will also be incorporated.
+
+<center>
+
+![](data/be1.png)
+
+</center>
+
+
+# 6) Project Management
+
+# 7) Other relevant work
