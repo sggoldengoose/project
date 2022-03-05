@@ -1,7 +1,7 @@
 ---
-title: "Our VA Project"
+title: "Visual Analytics Project - Group 5"
 description: |
-  Welcome to the website. I hope you enjoy it!!
+  Building visually driven web-enabled Shiny application for democratising data and analytics.
 site: distill::distill_website
 ---
 
